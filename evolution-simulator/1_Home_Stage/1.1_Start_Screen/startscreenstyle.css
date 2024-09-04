@@ -1,0 +1,56 @@
+/* Prevent scrolling */
+body {
+    overflow: hidden;
+    background-color: #20b9ec;
+}
+
+.evolution-title {
+    position: absolute;
+    left: 50%;
+    top: 15%;
+    transform: translate(-50%, -50%);
+    background-color: #1a63c4;
+    color: #f0f0f0;
+    border: 2px solid #1a63c5;
+    padding: 30px 60px;
+    border-radius: 25px;
+    font-size: 36px;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    white-space: nowrap; 
+}
+
+/* Styles for the buttons */
+.info-button {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    background-color: #008CBA;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-family: 'Courier New', Courier, monospace; 
+}
+
+.start-button {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #1a63c4;
+    color: white;
+    border: none;
+    padding: 20px 100px; 
+    cursor: pointer;
+    border-radius: 15px; 
+    font-size: 24px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-weight: bold;
+}
+
+.start-button:hover{
+    background-color: #145a91;
+}

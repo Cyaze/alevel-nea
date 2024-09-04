@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulation Factors</title>
+    <link rel="stylesheet" href="factors.css">
+    <link rel="stylesheet" href="1.2.1_Saves/savePopup.css"> <!-- Include the popup CSS -->
+</head>
+<body>
+    <button class="back-button" onclick="returnToStart()">&#9664; Home</button> <!-- Moved outside the container -->
+
+    <div class="container">
+        <h1>Simulation Factors</h1>
+
+        <!-- Main Factors -->
+        <div class="slider-container" >
+            <label for="generations-slider" onmouseover="showTooltip('Number of generations for the simulation')" onmouseout="hideTooltip()">Number of Generations</label>
+            <input type="range" id="generations-slider" min="1" max="100" step="1" value="25">
+            <span id="generations-value">25</span>
+        </div>
+
+        <div class="slider-container">
+            <label for="population-slider" onmouseover="showTooltip('Initial population size to start the simulation with')" onmouseout="hideTooltip()">Starting Population</label>
+            <input type="range" id="population-slider" min="1" max="100" step="1" value="50">
+            <span id="population-value">50</span>
+        </div>
+
+        <!-- Advanced Features -->
+        <div class="advanced-settings">
+            <label for="advanced-checkbox">
+                <input type="checkbox" id="advanced-checkbox" onclick="toggleAdvanced()"> Enable Advanced Settings
+            </label>
+
+            <div id="advanced-factors" style="display: none;">
+                <div class="slider-container">
+                    <label for="mutation-slider" onmouseover="showTooltip('The rate at which mutations occur during the simulation')" onmouseout="hideTooltip()">Mutation Rate</label>
+                    <input type="range" id="mutation-slider" min="0" max="1" step="0.01" value="0.5">
+                    <span id="mutation-value">0.50</span>
+                </div>
+
+                <div class="slider-container">
+                    <label for="gravity-slider" onmouseover="showTooltip('Gravity strength affecting the simulation')" onmouseout="hideTooltip()">Gravity Strength</label>
+                    <input type="range" id="gravity-slider" min="0" max="20" step="0.1" value="2.5">
+                    <span id="gravity-value">2.5</span>
+                </div>
+
+                <div class="slider-container">
+                    <label for="friction-slider" onmouseover="showTooltip('The level of friction in the environment')" onmouseout="hideTooltip()">Friction Level</label>
+                    <input type="range" id="friction-slider" min="0" max="1" step="0.01" value="0.15">
+                    <span id="friction-value">0.15</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Reset, Start, Save/Load Buttons -->
+        <div class="button-container">
+            <button class="reset-button" onclick="resetDefaults()">Reset</button>
+            <button class="submit-button" onclick="submitData()">Start Simulation</button>
+            <button class="save-load-button" onclick="showSavePopup()">Save/Load Progress</button> 
+        </div>
+    </div>
+
+    <!-- Tooltip box -->
+    <div id="tooltip" class="tooltip"></div>
+
+    <!-- Save/Load Popup -->
+    <div id="save-popup" class="popup">
+        <div class="popup-content">
+            <!-- Close button -->
+            <button class="close-btn" onclick="closePopup()">×</button> 
+            <div id="login-form">
+                <h2>Login / Signup</h2>
+                <input type="text" id="username" placeholder="Username" />
+                <input type="password" id="password" placeholder="Password" />
+                <button onclick="login()">Login</button>
+                <button onclick="signup()">Signup</button>
+            </div>
+            <div id="save-form" style="display:none;">
+                <h2>Save Your Factor</h2>
+                <input type="text" id="save-name" placeholder="Save Name" />
+                <button onclick="saveProgress()">Save</button>
+                <button onclick="loadSaves()">Load Saves</button>
+            </div>
+            <div id="load-form" style="display:none;">
+                <h2>Your Saves</h2>
+                <div id="save-list"></div>
+                <button onclick="returnBack()">Return</button>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="factors.js"></script>
+    <script src="1.2.1_Saves/saves.js"></script> 
+
+</body>
+</html>

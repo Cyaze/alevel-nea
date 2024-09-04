@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Information Screen</title>
+    <link rel="stylesheet" href="info.css">
+</head>
+
+<body>
+    <button class="home-button" onclick="returnHome()">&#9664; Home</button>
+    <div class="info-container">
+        <h1>Evolution Information</h1>
+        <!-- To load images-->
+        <img id="info-image" src="infoImages/image1.jpg" alt="Info Image">
+        <p id="info-text">Information about the first image.</p>
+
+        <!-- Navigation arrows with each subclass, calling the respective functions-->
+        <div class="nav-arrows">
+            <button class="arrow-left" onclick="prevSlide()">&#9664;</button>
+            <button class="arrow-right" onclick="nextSlide()">&#9654;</button>
+        </div>
+    </div>
+    <script src="info.js"></script>
+</body>
+</html>

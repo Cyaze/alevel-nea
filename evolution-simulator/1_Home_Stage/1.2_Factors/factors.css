@@ -1,0 +1,124 @@
+body {
+    background-color: #f0f4f8;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Style for the back button */
+.back-button {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    background-color: #1a63c4;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: #0072a3;
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 600px;
+    width: 100%;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 30px;
+    color: #333333;
+}
+
+.slider-container {
+    margin-bottom: 20px;
+    text-align: left;
+    position: relative;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #555555;
+    cursor: pointer;
+}
+
+input[type="range"] {
+    width: 100%;
+    margin: 10px 0;
+}
+
+span {
+    display: block;
+    text-align: right;
+    color: #007BFF;
+    font-weight: bold;
+}
+
+.advanced-settings {
+    margin-top: 20px;
+    text-align: left;
+}
+
+button.submit-button, button.reset-button, button.save-load-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.submit-button {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.submit-button:hover {
+    background-color: #388E3C;
+}
+
+.reset-button {
+    background-color: #f44336;
+    color: white;
+}
+
+.reset-button:hover {
+    background-color: #d32f2f;
+}
+
+.save-load-button{
+    background-color: #4CAF51;
+    color: white;
+}
+
+.save-load-button:hover{
+    background-color: #388E3D;
+}
+
+/* Tooltip style */
+.tooltip {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 14px;
+    display: none;
+    z-index: 1000;
+}
