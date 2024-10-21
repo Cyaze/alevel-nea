@@ -17,7 +17,7 @@ let generationTimer;
 let timeRemaining = GENERATION_DURATION / 1000; // Time remaining in seconds
 const totalGenerations = JSON.parse(localStorage.getItem('generations'))
 
-// Load gravity and friction from local storage with defaults
+//Load gravity and friction from local storage with defaults
 const gravity = JSON.parse(localStorage.getItem('gravity')) || 0.1;
 const friction = JSON.parse(localStorage.getItem('friction')) || 0.99;
 
@@ -292,10 +292,12 @@ function evaluateGeneration() {
     saveGenerationData();
 
     //Keep the top 50%
-    const survivors = creatures.slice(0, creatures.length / 2);
-    const offspring = reproduceCreatures(survivors);
-    creatures = survivors.concat(offspring);
-
+    if (creatures.length > 1){
+        const survivors = creatures.slice(0, creatures.length / 2);
+        const offspring = reproduceCreatures(survivors);
+        creatures = survivors.concat(offspring);
+    }
+    
     resetCreaturesPosition();
 }
 
