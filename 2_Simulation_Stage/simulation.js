@@ -247,8 +247,8 @@ function startGenerations() {
                 runNextGeneration();
             });
         } else {
-            //Factor page as a placeholder
-            window.location.href = '/1_Home_Stage/1.2_Factors/factors.html';
+            //Redirect to results page
+            window.location.href = '/3_Results_Stage/results.html';
         }
     }
 
@@ -292,9 +292,11 @@ function evaluateGeneration() {
     saveGenerationData();
 
     //Keep the top 50%
-    const survivors = creatures.slice(0, creatures.length / 2);
-    const offspring = reproduceCreatures(survivors);
-    creatures = survivors.concat(offspring);
+    if (creatures.length > 1){
+        const survivors = creatures.slice(0, creatures.length / 2);
+        const offspring = reproduceCreatures(survivors);
+        creatures = survivors.concat(offspring);
+    }
 
     resetCreaturesPosition();
 }

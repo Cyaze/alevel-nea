@@ -11,3 +11,7 @@ function drawPlatforms(ctx) {
 function returnFactor() {
     window.location.href = '/1_Home_Stage/1.2_Factors/factors.html';
 }
+
+function skip() {
+    window.location.href = '/3_Results_Stage/results.html';
+}

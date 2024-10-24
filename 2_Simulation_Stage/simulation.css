@@ -10,7 +10,7 @@ canvas {
     background-color: #22b6f1;
 }
 
-/* Style for the button */
+/*Factor button */
 #factor-button {
     position: fixed;
     top: 10px;
@@ -25,5 +25,23 @@ canvas {
 }
 
 #factor-button:hover {
+    background-color: #0056b3;
+}
+
+/*Skip button */
+#skip-button {
+    position: fixed;
+    top: 65px;
+    left: 10px;
+    background-color: #1a63c4;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#skip-button:hover {
     background-color: #0056b3;
 }

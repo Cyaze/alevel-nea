@@ -3,12 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Evolution Simulator</title>
+    <title>Simulation Results</title>
     <link rel="stylesheet" href="results.css">
+     <!--Chart.js-->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
-
 <body>
-    <h1 class="results-title">Results!</h1>
+    <div class="container">
+        <!--Left: Graph -->
+        <div class="graph-section">
+            <h2>Distance Travelled per Generation</h2>
+            <!--Canvas ID-->
+            <canvas id="distanceChart"></canvas> 
+        </div>
+
+        <!--Right: Number Stats -->
+        <div class="stats-section">
+            <h2>Summary Statistics</h2>
+            <p><strong>Best Distance Traveled:</strong> <span id="bestDistance">0</span> px</p>
+            <p><strong>Median Distance Traveled:</strong> <span id="medianDistance">0</span> px</p>
+            <p><strong>Worst Distance Traveled:</strong> <span id="worstDistance">0</span> px</p>
+            <p><strong>Total Generations Simulated:</strong> <span id="totalGenerations">0</span></p>
+        </div>
+
+        <!--Home Button -->
+        <button id="backButton" class="back-button">Back to Home</button>
+    </div>
+
     <script src="results.js"></script>
 </body>
 </html>
