@@ -9,27 +9,29 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
+
     <div class="container">
-        <!--Left: Graph -->
+        <!--Left: Graph-->
         <div class="graph-section">
             <h2>Distance Travelled per Generation</h2>
             <!--Canvas ID-->
             <canvas id="distanceChart"></canvas> 
         </div>
 
-        <!--Right: Number Stats -->
-        <div class="stats-section">
-            <h2>Summary Statistics</h2>
-            <p><strong>Best Distance Traveled:</strong> <span id="bestDistance">0</span> px</p>
-            <p><strong>Median Distance Traveled:</strong> <span id="medianDistance">0</span> px</p>
-            <p><strong>Worst Distance Traveled:</strong> <span id="worstDistance">0</span> px</p>
-            <p><strong>Total Generations Simulated:</strong> <span id="totalGenerations">0</span></p>
+        <!--Right: Number Stats-->
+        <div class="statistics-section">
+            <h3>Summary Statistics</h3>
+            <p>Total Generations Simulated: <span id="totalGenerations">0</span></p>
+            <p>Best Distance Traveled: <span id="bestDistance">0 px</span></p>
+            <p>Median Distance Traveled: <span id="medianDistance">0 px</span></p>
+            <p>Worst Distance Traveled: <span id="worstDistance">0 px</span></p>
         </div>
 
-        <!--Home Button -->
-        <button id="backButton" class="back-button">Back to Home</button>
+        <!--Home Button-->
+        <button id="backButton" class="back-btn">Back to Home</button>
     </div>
 
+    <script src="chartHandler.js"></script>
     <script src="results.js"></script>
 </body>
 </html>

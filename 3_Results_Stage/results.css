@@ -1,31 +1,61 @@
+/* General Layout */
 .container {
     display: flex;
     justify-content: space-between;
     padding: 20px;
-    height: 100vh;
+    height: 90vh;
+    font-family: Arial, sans-serif;
 }
 
-.graph-section, .stats-section {
+.graph-section, .statistics-section {
     flex: 1;
     padding: 20px;
-    font-family: Arial, Helvetica, sans-serif;
 }
 
-.back-button {
+.graph-section {
+    border-right: 1px solid #ddd;
+}
+
+/* Back Button */
+.back-btn {
     position: fixed;
-    bottom: 10px;
-    right: 10px;
-    background-color: #1a63c4;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
     color: white;
     border: none;
-    padding: 10px 20px;
-    cursor: pointer;
     border-radius: 5px;
-    font-size: 16px;
-    transition: background-color 0.3s ease;
+    cursor: pointer;
 }
 
 .back-btn:hover {
     background-color: #0056b3;
 }
 
+.close-btn {
+    margin-top: 10px;
+    background-color: #ff4d4d;
+    color: white;
+    padding: 8px 16px;
+}
+
+.close-btn:hover {
+    background-color: #cc0000;
+}
+
+.statistics-section {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+.statistics-section h3 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.statistics-section p {
+    font-size: 16px;
+    margin: 5px 0;
+}
