@@ -11,7 +11,7 @@ window.onload = function() {
         let worstDistances = [];
     
         Object.values(generationData).forEach(generation => {
-            //Sort the generation data to find best, median, and worst
+            //For the stats, best, worst and median
             const sortedDistances = generation.sort((a, b) => b - a);
             const best = sortedDistances[0];
             const worst = sortedDistances[sortedDistances.length - 1];

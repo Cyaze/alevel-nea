@@ -33,17 +33,79 @@
     background-color: #0056b3;
 }
 
+/* Popup Styling */
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup-content {
+    position: relative; /* Needed for positioning the "X" button */
+    background-color: white;
+    padding: 30px 60px; /* Increased padding for more spacing */
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 400px; /* Increased width for more space */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.popup.hidden {
+    display: none;
+}
+
+/* "X" Button Styling */
 .close-btn {
-    margin-top: 10px;
-    background-color: #ff4d4d;
-    color: white;
-    padding: 8px 16px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: transparent; /* Transparent background */
+    color: #ff4d4d; /* Red color for the "X" */
+    font-size: 20px; /* Increased font size for visibility */
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    line-height: 1; /* Ensures button size matches the font size */
 }
 
 .close-btn:hover {
-    background-color: #cc0000;
+    color: #cc0000; /* Darker red on hover */
 }
 
+button {
+    font-family: Arial, sans-serif;
+    margin-top: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#downloadYes, #downloadNo, #restartSimulation, #returnHome {
+    background-color: #007bff;
+    color: white;
+    width: 100%;
+    max-width: 150px;
+}
+
+
+button:hover {
+    background-color: #ffffffcc;
+}
+
+
+/* Statistics Section */
 .statistics-section {
     font-family: Arial, sans-serif;
     margin: 20px;

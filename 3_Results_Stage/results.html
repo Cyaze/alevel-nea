@@ -5,20 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simulation Results</title>
     <link rel="stylesheet" href="results.css">
-     <!--Chart.js-->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!--Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> 
 </head>
 <body>
 
     <div class="container">
-        <!--Left: Graph-->
+        <!--Left: Graph -->
         <div class="graph-section">
             <h2>Distance Travelled per Generation</h2>
-            <!--Canvas ID-->
-            <canvas id="distanceChart"></canvas> 
+            <canvas id="distanceChart"></canvas> <!-- Canvas for the Chart -->
         </div>
 
-        <!--Right: Number Stats-->
+        <!--Right: Statistics -->
         <div class="statistics-section">
             <h3>Summary Statistics</h3>
             <p>Total Generations Simulated: <span id="totalGenerations">0</span></p>
@@ -27,11 +26,35 @@
             <p>Worst Distance Traveled: <span id="worstDistance">0 px</span></p>
         </div>
 
-        <!--Home Button-->
+        <!--Home Button -->
         <button id="backButton" class="back-btn">Back to Home</button>
     </div>
 
+    <!--Popup for downloading data and simulation options -->
+    <div class="popup download-popup hidden">
+        <div class="popup-content">
+            <button class="close-btn" id="closeDownloadPopup">×</button> <!-- X Button -->
+            <p>Would you like to download the data before leaving?</p>
+            <button id="downloadYes">Yes</button>
+            <button id="downloadNo">No</button>
+        </div>
+    </div>
+    
+    <!--Simulation Options -->
+    <div class="popup simulation-options hidden">
+        <div class="popup-content">
+            <button class="close-btn" id="closeSimulationPopup">×</button> <!-- X Button -->
+            <p>Do you want to restart the simulation with current factors or return to the home page?</p>
+            <button id="restartSimulation">Restart Simulation</button>
+            <button id="returnHome">Return Home</button>
+        </div>
+    </div>
+
     <script src="chartHandler.js"></script>
+    <script src="popupHandler.js"></script>
     <script src="results.js"></script>
+    <!--SheetJS -->
+    <script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script>
+
 </body>
 </html>
